@@ -13,7 +13,7 @@ Forcesniffer runs quickly during initial page load to detect mobile devices; it 
 
 ## Devices detected by isMobile
 
-The following properties of the global `isMobile` object will either be `true` or `false`
+The following properties of the global `isMobile` object will either be `true` or `false` and ForceUI for force.com related detection
 
 ### Salesforce devices
 
