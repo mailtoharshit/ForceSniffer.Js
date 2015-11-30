@@ -1,39 +1,39 @@
 <apex:page standardStylesheets="false" showHeader="false" applyHtmlTag="false" docType="html-5.0">
-    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <head>
-        Importing ForceSniffer as CDN
-        <apex:includeScript value="https://cdn.rawgit.com/mailtoharshit/ForceSniffer.Js/master/js/forcesniffer.js"/>
+   <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+     <apex:includeScript value="//cdn.rawgit.com/mailtoharshit/ForceSniffer.Js/master/js/forcesniffer.min.js"/>
+      <script>
+       function detect()
+       {
+           //Check for all Phone
+           if(isMobile.phone)
+           {
+              alert("Opened in Phone  ---- /route/phone.page"); 
+           }
+           
+           //Check for all Tablet
+           if(isMobile.tablet)
+           {
+              alert("Opened in Tablet ---- /route/Tablet.page");
+           }
+           
+           //Check if Desktop 
+           if(!isMobile.any)
+           {
+              alert("Opened in Non-Desktop Device ---- /route/global.page"); 
+           }
+           
+           //Check if Salesforce1
+           if(ForceUI.isSalesforce1())
+           {
+              alert ("Opened in Salesforce1 ---- /route/salesforce1.page");
+           }
+           
+       }
+      </script>
+     </head>
+     <body onload='detect();'>
          
-            <script>
-            function detect()
-            {
-                //Check for all Phone
-                if(isMobile.phone)
-                {
-                    alert("Opened in Phone  ---- /route/phone.page"); 
-                }
-                
-                //Check for all Tablet
-                if(isMobile.tablet)
-                {
-                    alert("Opened in Tablet ---- /route/Tablet.page");
-                }
-                
-                //Check if Desktop 
-                if(!isMobile.any)
-                {
-                    alert("Opened in Non-Desktop Device ---- /route/global.page"); 
-                }
-                
-                //Check if Salesforce1
-                if(ForceUI.isSalesforce1())
-                {
-                    alert ("Opened in Salesforce1 ---- /route/salesforce1.page");
-                }
-            }
-            </script>
-        </head>
-        <body onload='detect();'>
-        </body>
-    </html>
+    </body>
+</html>
 </apex:page>
