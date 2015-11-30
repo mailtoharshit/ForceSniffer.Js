@@ -84,38 +84,44 @@ The following properties of the global `isMobile` object will either be `true` o
 I include the minified version of the script, inline, and at the top of the `<head>`. Cellular connections tend to suck, so it would be wasteful overhead to open another connection, just to download ~1.4kb of JS:
 
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <script>
-        // Minified version of isMobile included in the HTML since it's small
-        !function(a){var b=/iPhone/i,c=/iPod/i,d=/iPad/i,e=/(?=.*\bAndroid\b)(?=.*\bMobile\b)/i,f=/Android/i,g=/IEMobile/i,h=/(?=.*\bWindows\b)(?=.*\bARM\b)/i,i=/BlackBerry/i,j=/BB10/i,k=/Opera Mini/i,l=/(?=.*\bFirefox\b)(?=.*\bMobile\b)/i,m=new RegExp("(?:Nexus 7|BNTV250|Kindle Fire|Silk|GT-P1000)","i"),n=function(a,b){return a.test(b)},o=function(a){var o=a||navigator.userAgent,p=o.split("[FBAN");return"undefined"!=typeof p[1]&&(o=p[0]),this.apple={phone:n(b,o),ipod:n(c,o),tablet:!n(b,o)&&n(d,o),device:n(b,o)||n(c,o)||n(d,o)},this.android={phone:n(e,o),tablet:!n(e,o)&&n(f,o),device:n(e,o)||n(f,o)},this.windows={phone:n(g,o),tablet:n(h,o),device:n(g,o)||n(h,o)},this.other={blackberry:n(i,o),blackberry10:n(j,o),opera:n(k,o),firefox:n(l,o),device:n(i,o)||n(j,o)||n(k,o)||n(l,o)},this.seven_inch=n(m,o),this.any=this.apple.device||this.android.device||this.windows.device||this.other.device||this.seven_inch,this.phone=this.apple.phone||this.android.phone||this.windows.phone,this.tablet=this.apple.tablet||this.android.tablet||this.windows.tablet,"undefined"==typeof window?this:void 0},p=function(){var a=new o;return a.Class=o,a};"undefined"!=typeof module&&module.exports&&"undefined"==typeof window?module.exports=o:"undefined"!=typeof module&&module.exports&&"undefined"!=typeof window?module.exports=p():"function"==typeof define&&define.amd?define("isMobile",[],a.isMobile=p()):a.isMobile=p()}(this);
-
-
-        // My own arbitrary use of isMobile, as an example
-        (function () {
-            var MOBILE_SITE = '/mobile/index.html', // site to redirect to
-                NO_REDIRECT = 'noredirect'; // cookie to prevent redirect
-
-            // I only want to redirect iPhones, Android phones and a handful of 7" devices
-            if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
-
-                // Only redirect if the user didn't previously choose
-                // to explicitly view the full site. This is validated
-                // by checking if a "noredirect" cookie exists
-                if ( document.cookie.indexOf(NO_REDIRECT) === -1 ) {
-                    document.location = MOBILE_SITE;
-                }
-            }
-        })();
-    </script>
-</head>
-<body>
-    <!-- imagine lots of html and content -->
-</body>
+```html<apex:page standardStylesheets="false" showHeader="false" applyHtmlTag="false" docType="html-5.0">
+   <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+      <script>
+       //Minified ForceSniffer.js
+       !function(e){e.ForceUI=e.ForceUI||{},e.ForceUI.isSalesforce1=function(){return"undefined"!=typeof sforce&&sforce&&!!sforce.one}}(this),function(e){var i=/iPhone/i,o=/iPod/i,n=/iPad/i,t=/(?=.*\bAndroid\b)(?=.*\bMobile\b)/i,d=/Android/i,r=/(?=.*\bAndroid\b)(?=.*\bSD4930UR\b)/i,s=/(?=.*\bAndroid\b)(?=.*\b(?:KFOT|KFTT|KFJWI|KFJWA|KFSOWI|KFTHWI|KFTHWA|KFAPWI|KFAPWA|KFARWI|KFASWI|KFSAWI|KFSAWA)\b)/i,b=/IEMobile/i,h=/(?=.*\bWindows\b)(?=.*\bARM\b)/i,a=/BlackBerry/i,l=/BB10/i,p=/Opera Mini/i,f=/(CriOS|Chrome)(?=.*\bMobile\b)/i,c=/(?=.*\bFirefox\b)(?=.*\bMobile\b)/i,u=new RegExp("(?:Nexus 7|BNTV250|Kindle Fire|Silk|GT-P1000)","i"),F=function(e,i){return e.test(i)},w=function(e){var w=e||navigator.userAgent,A=w.split("[FBAN");return"undefined"!=typeof A[1]&&(w=A[0]),this.apple={phone:F(i,w),ipod:F(o,w),tablet:!F(i,w)&&F(n,w),device:F(i,w)||F(o,w)||F(n,w)},this.amazon={phone:F(r,w),tablet:!F(r,w)&&F(s,w),device:F(r,w)||F(s,w)},this.android={phone:F(r,w)||F(t,w),tablet:!F(r,w)&&!F(t,w)&&(F(s,w)||F(d,w)),device:F(r,w)||F(s,w)||F(t,w)||F(d,w)},this.windows={phone:F(b,w),tablet:F(h,w),device:F(b,w)||F(h,w)},this.other={blackberry:F(a,w),blackberry10:F(l,w),opera:F(p,w),firefox:F(c,w),chrome:F(f,w),device:F(a,w)||F(l,w)||F(p,w)||F(c,w)||F(f,w)},this.seven_inch=F(u,w),this.any=this.apple.device||this.android.device||this.windows.device||this.other.device||this.seven_inch,this.phone=this.apple.phone||this.android.phone||this.windows.phone,this.tablet=this.apple.tablet||this.android.tablet||this.windows.tablet,"undefined"==typeof window?this:void 0},A=function(){var e=new w;return e.Class=w,e};"undefined"!=typeof module&&module.exports&&"undefined"==typeof window?module.exports=w:"undefined"!=typeof module&&module.exports&&"undefined"!=typeof window?module.exports=A():"function"==typeof define&&define.amd?define("isMobile",[],e.isMobile=A()):e.isMobile=A()}(this);
+       function detect()
+       {
+           //Check for all Phone
+           if(isMobile.phone)
+           {
+              alert("Opened in Phone  ---- /route/phone.page"); 
+           }
+           
+           //Check for all Tablet
+           if(isMobile.tablet)
+           {
+              alert("Opened in Tablet ---- /route/Tablet.page");
+           }
+           
+           //Check if Desktop 
+           if(!isMobile.any)
+           {
+              alert("Opened in Non-Desktop Device ---- /route/global.page"); 
+           }
+           
+           //Check if Salesforce1
+           if(ForceUI.isSalesforce1())
+           {
+              alert ("Opened in Salesforce1 ---- /route/salesforce1.page");
+           }
+       }
+      </script>
+     </head>
+     <body onload='detect();'>
+     </body>
 </html>
+</apex:page>
 ```
 
 ### node.js usage
