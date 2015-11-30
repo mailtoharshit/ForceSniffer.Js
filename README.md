@@ -9,7 +9,7 @@
 When you have to detect device of end-user and you have completely separate site had already been created for mobile devices. So that you couldn't depend on media queries, feature detection, graceful degradation, progressive enhancement, or any of the cool techniques for selectively displaying things. or If couldn't do detection on the back-end, because the entire visualforce was generated as HTML with apex-tags,so easier approach is to do the detection client-side.
 
 ## How it works
-isMobile runs quickly during initial page load to detect mobile devices; it then creates a JavaScript object with the results.
+Forcesniffer runs quickly during initial page load to detect mobile devices; it then creates a JavaScript object with the results.
 
 ## Devices detected by isMobile
 
