@@ -140,18 +140,18 @@
     }
     })(this);
     
-//Detect if Visualforce Inside Saleforce
+//Detect if Visualforce Inside Saleforce1
 (function(myContext){
     myContext.ForceUI = myContext.ForceUI || {};
-    myContext.ForceUI.isVisualforceInside_Salesforce1 = function() {
+    myContext.ForceUI.isVF_In_Salesforce1 = function() {
         return((!isLightning()) && ForceUI.isSalesforce1());
     }
     })(this);
     
-//Detect if Visualforce inside Salesforce1 Classic
+//Detect if Visualforce inside Salesforce Classic
 (function(myContext){
     myContext.ForceUI = myContext.ForceUI || {};
-    myContext.ForceUI.isVisualforceInside_SalesforceClassic = function() {
+    myContext.ForceUI.isVF_In_SalesforceClassic = function() {
         return((!isLightning()) && (!ForceUI.isSalesforce1());
     }
     })(this);
