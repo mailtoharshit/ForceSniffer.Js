@@ -81,10 +81,11 @@ The following properties of the global `isMobile` object will either be `true` o
 
 ## Example Usage
 
-I include the minified version of the script, inline, and at the top of the `<head>`. Cellular connections tend to suck, so it would be wasteful overhead to open another connection, just to download ~1.4kb of JS:
+I added minified version of forcesniffer.js file to avoid importing 1.6kb of js file. You can always import from this cdn
 
 
-```html<apex:page standardStylesheets="false" showHeader="false" applyHtmlTag="false" docType="html-5.0">
+```html
+<apex:page standardStylesheets="false" showHeader="false" applyHtmlTag="false" docType="html-5.0">
    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <head>
       <script>
@@ -122,15 +123,5 @@ I include the minified version of the script, inline, and at the top of the `<he
      </body>
 </html>
 </apex:page>
-```
 
-### node.js usage
-
-#####Installation
-`npm install ismobilejs`
-
-#####Usage
-```
-var isMobile = require('ismobilejs');
-console.log(isMobile(req.headers['user-agent']).any);
 ```
