@@ -2,7 +2,7 @@
 
 Simplified Library that detect Mobile Devices, Salesforce1 App and other Saleforce Context
 
-## Why use ForceJs?
+## Why use ForceSniffer.Js?
 
 When you have to detect device of end-user and you have completely separate site had already been created for mobile devices. So that you couldn't depend on media queries, feature detection, graceful degradation, progressive enhancement, or any of the cool techniques for selectively displaying things.
 
