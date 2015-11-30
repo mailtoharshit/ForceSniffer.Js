@@ -1,15 +1,13 @@
 # ForceSniffer.Js (Inspired by isMobile)
 
-Simplified Library that detect Mobile Devices, Salesforce1 App and other Saleforce Context
+[<img src="https://login.salesforce.com/img/logo190.png" align="right" width="300">]()
 
-## Why use ForceSniffer.Js?
+> Simplified Library that detect Mobile Devices, Salesforce1 App and other [Saleforce Context](http://login.salesforce.com)
 
-When you have to detect device of end-user and you have completely separate site had already been created for mobile devices. So that you couldn't depend on media queries, feature detection, graceful degradation, progressive enhancement, or any of the cool techniques for selectively displaying things.
-
-If couldn't do detection on the back-end, because the entire site was generated as HTML, and then cached and served by a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network), so easier approach is to do the detection client-side.
+## When to use ForceSniffer.js ? 
+When you have to detect device of end-user and you have completely separate site had already been created for mobile devices. So that you couldn't depend on media queries, feature detection, graceful degradation, progressive enhancement, or any of the cool techniques for selectively displaying things. or If couldn't do detection on the back-end, because the entire visualforce was generated as HTML with apex-tags,so easier approach is to do the detection client-side.
 
 ## How it works
-
 isMobile runs quickly during initial page load to detect mobile devices; it then creates a JavaScript object with the results.
 
 ## Devices detected by isMobile
