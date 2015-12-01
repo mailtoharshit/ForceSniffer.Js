@@ -2,7 +2,8 @@
 
 [<img src="http://2.bp.blogspot.com/-80-2MFRFEUw/Vlvn9ZARn5I/AAAAAAAAI_g/FGJRP0RXbc0/s200/Screen%2BShot%2B2015-11-29%2Bat%2B10.08.13%2BPM.png" align="right" width="300">]()
 
-> Simplified Library that detect Mobile Devices, Salesforce1 App and other [Saleforce Context](http://login.salesforce.com)
+> Simplified Library that detect Mobile Devices, Salesforce1 App and other Saleforce Context
+
 > Read detailed blog post [here](http://www.oyecode.com/2015/11/forcesnifferjs-device-detection-in.html)
 
 ## When to use ForceSniffer.js ? 
