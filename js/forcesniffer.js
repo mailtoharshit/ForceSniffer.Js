@@ -155,3 +155,58 @@
         return((!isLightning()) && (!ForceUI.isSalesforce1());
     }
     })(this);
+	
+//Detect browser type
+(function(myContext) {
+    myContext.ForceUI = myContext.ForceUI || {};
+    myContext.ForceUI.browserType = function() {
+        if (navigator.userAgent.indexOf("OPR") != -1) { // if browser type is Opera
+            return 'Opera';
+        } else if (navigator.userAgent.indexOf("Chrome") != -1) { // if browser type is Chrome
+            return 'Chrome';
+        } else if (navigator.userAgent.indexOf("Safari") != -1) { // if browser type is Safari
+            return 'Safari';
+        } else if (navigator.userAgent.indexOf("Firefox") != -1) { // if browser type is Firefox
+            return 'Firefox';
+        } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) { // if browser is IE
+            return 'IE';
+        } else {
+            return 'unknown'; // if browser is something else
+        }
+    }
+})(this);
+
+//Detect browser version alone
+(function(myContext) {
+    myContext.ForceUI = myContext.ForceUI || {};
+    myContext.ForceUI.browserVersion = function() {
+        var ua = window.navigator.userAgent;
+        var browserStartPoint = ua.indexOf(ForceUI.browserType());
+
+        // If browser type is found, return it's version number
+        if (ForceUI.browserType() == 'Chrome') // get Chrome browser version
+            return ua.substring(browserStartPoint + 7, ua.indexOf(" ", browserStartPoint));
+        else if (ForceUI.browserType() == 'IE') { // get IE browser version
+            browserStartPoint = navigator.userAgent.indexOf("MSIE");
+            return ua.substring(browserStartPoint + 5, ua.indexOf(";", browserStartPoint));
+        } else if (ForceUI.browserType() == 'Firefox') // get Firefox browser version
+            return ua.substring(browserStartPoint + 8, ua.length);
+        else if (ForceUI.browserType() == 'Safari') // get Safari browser version
+            return ua.substring(browserStartPoint + 7, ua.length);
+        else if (ForceUI.browserType() == 'Opera') { // get Opera browser version
+            browserStartPoint = navigator.userAgent.indexOf("OPR");
+            return ua.substring(browserStartPoint + 4, ua.length);
+        } else // If another browser, return 0
+            return 0
+
+    }
+})(this);
+
+//Detect browser type with version
+(function(myContext) {
+    myContext.ForceUI = myContext.ForceUI || {};
+    myContext.ForceUI.browserTypeWithVersion = function() { // get browser Type along with version
+        var result = ForceUI.browserType() + ' ' + ForceUI.browserVersion();
+        return result;
+    }
+})(this);
