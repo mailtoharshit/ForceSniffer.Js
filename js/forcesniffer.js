@@ -1,5 +1,5 @@
 /*
- * forceInspector.js v1.0.0
+ * ForceSniffer.js v1.0.0
  * Device Detect Library for Phone and Tablets and other 
  * device include (Amazon Silk, mini-opera and Windows Phone),
  * and any kind of seven inch device, via user agent sniffing.
@@ -176,7 +176,7 @@
     }
 })(this);
 
-//Detect browser version alone
+//Detects browser version
 (function(myContext) {
     myContext.ForceUI = myContext.ForceUI || {};
     myContext.ForceUI.browserVersion = function() {
@@ -202,7 +202,7 @@
     }
 })(this);
 
-//Detect browser type with version
+//Detect browser type with Browser Version
 (function(myContext) {
     myContext.ForceUI = myContext.ForceUI || {};
     myContext.ForceUI.browserTypeWithVersion = function() { // get browser Type along with version
