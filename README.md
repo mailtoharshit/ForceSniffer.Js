@@ -81,6 +81,12 @@ The following properties of the global `isMobile` object will either be `true` o
 * `isMobile.tablet` - any device in the 'tablet' groups above
 
 
+### Browser Detection
+
+* `ForceUI.browserType()` - returns the browser being used. Ex : Chrome
+* `ForceUI.browserVersion()` - returns the browser version. Ex: 10.0
+* `ForceUI.browserTypeWithVersion()` - returns the browser along with version. Ex : IE 10.0
+
 ## Example Usage
 
 I added minified version of forcesniffer.js file to avoid importing 1.6kb of js file. You can always import from this cdn
