@@ -152,10 +152,10 @@
 (function(myContext){
     myContext.ForceUI = myContext.ForceUI || {};
     myContext.ForceUI.isVF_In_SalesforceClassic = function() {
-        return((!isLightning()) && (!ForceUI.isSalesforce1());
+        return((!isLightning()) && !ForceUI.isSalesforce1());
     }
     })(this);
-	
+    
 //Detect browser type
 (function(myContext) {
     myContext.ForceUI = myContext.ForceUI || {};
@@ -209,4 +209,4 @@
         var result = ForceUI.browserType() + ' ' + ForceUI.browserVersion();
         return result;
     }
-})(this);
+})(this);   
