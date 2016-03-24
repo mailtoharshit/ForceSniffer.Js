@@ -228,19 +228,19 @@
         }
         case "macintel" :
         {
-             osType="Mac";
+             osType="OSX-Mac";
              break;
         }
 
         case "iphone" :
         {
-             osType="OSX-Iphone";
+             osType="iOS-iPhone";
              break;
         }
 
         case "ipad" :
         {
-             osType="OSX-Ipad";
+             osType="iOS-iPad";
              break;
         }
 
