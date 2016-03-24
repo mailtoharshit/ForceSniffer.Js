@@ -171,7 +171,8 @@
         } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) { // if browser is IE
             return 'IE';
         } else {
-            return 'unknown'; // if browser is something else
+            if(ForceUI.isSalesforce1()){return 'Salesforce1';}
+            else {return 'unknown';} // if browser is something else
         }
     }
 })(this);
