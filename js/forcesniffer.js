@@ -216,16 +216,17 @@
 (function(myContext){
     myContext.ForceUI = myContext.ForceUI || {};
     myContext.ForceUI.osType = function() {
-    var os=navigator.platform.substr(0,3).toLowerCase();
+    var os=navigator.platform.toLowerCase();
     var osType="";
+
     switch(os)
     {
-        case "win" : 
+        case "win32" : 
         {
             osType="Windows";
             break;
         }
-        case "mac" :
+        case "macintel" :
         {
              osType="Mac";
              break;
@@ -233,13 +234,19 @@
 
         case "iphone" :
         {
-             osType="iPhone";
+             osType="OSX-Iphone";
              break;
         }
 
         case "ipad" :
         {
-             osType="iPad";
+             osType="OSX-Ipad";
+             break;
+        }
+
+        default :
+        {
+             osType="Android";
              break;
         }
         
