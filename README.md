@@ -1,5 +1,7 @@
 # ForceSniffer.Js (Inspired by isMobile)
 
+[![Join the chat at https://gitter.im/mailtoharshit/ForceSniffer.Js](https://badges.gitter.im/mailtoharshit/ForceSniffer.Js.svg)](https://gitter.im/mailtoharshit/ForceSniffer.Js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [<img src="http://2.bp.blogspot.com/-80-2MFRFEUw/Vlvn9ZARn5I/AAAAAAAAI_g/FGJRP0RXbc0/s200/Screen%2BShot%2B2015-11-29%2Bat%2B10.08.13%2BPM.png" align="right" width="300">]()
 
 > Simplified Library that detect Mobile Devices, Salesforce1 App and other Saleforce Context
